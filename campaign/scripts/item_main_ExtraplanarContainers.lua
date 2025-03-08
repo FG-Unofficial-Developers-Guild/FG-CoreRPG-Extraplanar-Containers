@@ -86,17 +86,17 @@ function update(bReadOnly, ...)
 
 	limits_label.setVisible(bIsContainer)
 
-	capacityweight.setReadOnly(bReadOnly);
-	capacitycount.setReadOnly(bReadOnly);
-	internal_length.setReadOnly(bReadOnly);
-	internal_width.setReadOnly(bReadOnly);
-	internal_depth.setReadOnly(bReadOnly);
-	internal_volume.setReadOnly(bReadOnly);
-	length.setReadOnly(bReadOnly);
-	width.setReadOnly(bReadOnly);
-	depth.setReadOnly(bReadOnly);
-	volume.setReadOnly(bReadOnly);
-	capacityweight.setReadOnly(bReadOnly);
+	capacityweight.setReadOnly(bReadOnly)
+	capacitycount.setReadOnly(bReadOnly)
+	internal_length.setReadOnly(bReadOnly)
+	internal_width.setReadOnly(bReadOnly)
+	internal_depth.setReadOnly(bReadOnly)
+	internal_volume.setReadOnly(bReadOnly)
+	length.setReadOnly(bReadOnly)
+	width.setReadOnly(bReadOnly)
+	depth.setReadOnly(bReadOnly)
+	volume.setReadOnly(bReadOnly)
+	capacityweight.setReadOnly(bReadOnly)
 end
 
 function onInit()

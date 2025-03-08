@@ -34,7 +34,7 @@ tIgnoreWeight = {
 		sFieldSearch = ".*the first (%d+) bulk o?f? ?t?h?e?s?e? ?i?t?e?m?s? ?don't count against your bulk limits.*",
 	},
 }
-tIgnoreWeight["PFRPG2-Legacy"] = tIgnoreWeight["PFRPG2"]
+tIgnoreWeight['PFRPG2-Legacy'] = tIgnoreWeight['PFRPG2']
 
 --	luacheck: globals tAnnounce
 tAnnounce = {
@@ -130,7 +130,7 @@ local function build_container(table, item_name, node_item)
 		nTotalVolume = 0,
 		nTotalWeight = 0,
 		nTotalItems = 0,
-		nodeItem = node_item
+		nodeItem = node_item,
 	}
 end
 
@@ -295,7 +295,8 @@ local function measure_contents(node_inventory, table_containers_mundane, table_
 					end
 					if OptionsManager.isOption('EXTRAPLANAR_VOLUME', 'on') then
 						table_containers_mundane[string_item_location]['nTotalVolume'] = (
-							table_containers_mundane[string_item_location]['nTotalVolume'] + (number_item_count * DB.getValue(node_item, 'volume', 0))
+							table_containers_mundane[string_item_location]['nTotalVolume']
+							+ (number_item_count * DB.getValue(node_item, 'volume', 0))
 						)
 						if table_containers_mundane[string_item_location]['nMaxLength'] < DB.getValue(node_item, 'length', 0) then
 							table_containers_mundane[string_item_location]['bTooBig'] = 1
@@ -307,7 +308,8 @@ local function measure_contents(node_inventory, table_containers_mundane, table_
 							table_containers_mundane[string_item_location]['bTooBig'] = 1
 						end
 					end
-					local string_item_location_location = string.lower(DB.getValue(table_containers_mundane[string_item_location]['nodeItem'], 'location', ''))
+					local string_item_location_location =
+						string.lower(DB.getValue(table_containers_mundane[string_item_location]['nodeItem'], 'location', ''))
 					if table_containers_extraplanar[string_item_location_location] then
 						table_containers_extraplanar[string_item_location_location]['nTotalWeight'] = (
 							table_containers_extraplanar[string_item_location_location]['nTotalWeight'] + number_item_total_weight

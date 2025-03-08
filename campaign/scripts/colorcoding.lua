@@ -5,16 +5,16 @@
 
 function onValueChanged()
 	local sFieldName = fieldname[1]
-	if not sFieldName or  User.getRulesetName() == '5E' then
+	if not sFieldName or User.getRulesetName() == '5E' then
 		return
 	end
 
 	local nCompare = window[sFieldName].getValue()
 	if (nCompare == 0) or (getValue() < nCompare) then
-		setColor(ColorManager.getUIColor("usage_full"))
+		setColor(ColorManager.getUIColor('usage_full'))
 	elseif getValue() == nCompare then
-		setColor(ColorManager.getUIColor("health_wounds_heavy"))
+		setColor(ColorManager.getUIColor('health_wounds_heavy'))
 	elseif getValue() > nCompare then
-		setColor(ColorManager.getUIColor("health_wounds_critical"))
+		setColor(ColorManager.getUIColor('health_wounds_critical'))
 	end
 end
