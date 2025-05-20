@@ -1,7 +1,7 @@
 --
 -- Please see the LICENSE.md file included with this distribution for attribution and copyright information.
 --
--- luacheck: globals update
+-- luacheck: globals update volume.getVolume
 
 local bIsContainer = false
 
