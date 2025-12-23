@@ -6,7 +6,7 @@
 	<properties>
 		<name>Feature: Extraplanar Containers</name>
 		<version>1.21</version>
-		<author>bmos (Wil Thieme)</author>
+		<author>bmos (Ramona T)</author>
 		<description>This extension provides support for extraplanar containers by ignoring the weight of carried (but not equipped) items in supported containers ('of holding', 'portable hole', 'handy haversack', 'efficient quiver'.</description>
 	</properties>
 
